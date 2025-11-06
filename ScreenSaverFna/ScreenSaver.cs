@@ -12,7 +12,7 @@ namespace ScreenSaverFna
         private SpriteBatch spriteBatch = null!;
         private Core core = null!;
 
-        public ScreenSaver() 
+        public ScreenSaver()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -24,7 +24,7 @@ namespace ScreenSaverFna
         }
 
         /// <summary>
-        /// This function is automatically called when the game launches to initialize any non-graphic variables.
+        /// Эта функция автоматически вызывается при запуске игры для инициализации любых переменных, кроме графических.
         /// </summary>
         protected override void Initialize()
         {
@@ -32,33 +32,30 @@ namespace ScreenSaverFna
         }
 
         /// <summary>
-        /// Automatically called when your game launches to load any game assets (graphics, audio etc.)
+        /// Автоматически вызывается при запуске игры для загрузки любых игровых ресурсов (графики, звука и т. д.).
         /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             core = new(graphics, Content);
         }
 
         /// <summary>
-        /// Called each frame to update the game. Games usually runs 60 frames per second.
-        /// Each frame the Update function will run logic such as updating the world,
-        /// checking for collisions, gathering input, and playing audio.
+        /// Вызывается каждый кадр для обновления игры. Игры обычно работают со скоростью 60 кадров в секунду.
+        /// Каждый кадр функция Update будет выполнять логику, например, обновление мира,
+        /// проверку столкновений, сбор ввода и воспроизведение звука.
         /// </summary>
         protected override void Update(GameTime gameTime)
         {
-            //Update the things FNA handles for us underneath the hood:
             base.Update(gameTime);
             core.OffsetSnowflake();
         }
 
         /// <summary>
-        /// This is called when the game is ready to draw to the screen, it's also called each frame.
+        /// Вызывается, когда игра готова к отрисовке на экране, также вызывается каждый кадр.
         /// </summary>
         protected override void Draw(GameTime gameTime)
         {
-            //This will clear what's on the screen each frame, if we don't clear the screen will look like a mess:
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
@@ -66,7 +63,6 @@ namespace ScreenSaverFna
             core.ShowSnoflakes(spriteBatch);
             spriteBatch.End();
 
-            //Draw the things FNA handles for us underneath the hood:
             base.Draw(gameTime);
         }
     }
