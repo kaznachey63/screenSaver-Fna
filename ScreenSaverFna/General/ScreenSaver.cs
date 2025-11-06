@@ -1,7 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using ScreenSaverFna.Additions;
 
-namespace ScreenSaverFna
+namespace ScreenSaverFna.General
 {
     /// <summary>
     /// Основной класс программы

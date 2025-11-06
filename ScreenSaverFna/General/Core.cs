@@ -1,8 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
+using ScreenSaverFna.Additions;
+using ScreenSaverFna.Models;
 
-namespace ScreenSaverFna
+namespace ScreenSaverFna.General
 {
     /// <summary>
     /// Класс логики программы
@@ -15,7 +17,7 @@ namespace ScreenSaverFna
         private Texture2D bg = null!;
         private GraphicsDeviceManager graphics = null!;
 
-        public Core(GraphicsDeviceManager graphicsDeviceManager, ContentManager content) 
+        public Core(GraphicsDeviceManager graphicsDeviceManager, ContentManager content)
         {
             graphics = graphicsDeviceManager;
             sf = content.Load<Texture2D>("snowflake.png");

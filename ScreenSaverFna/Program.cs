@@ -7,7 +7,7 @@
         /// </summary>
         static void Main()
         {
-            using var screenSaver = new ScreenSaver();
+            using var screenSaver = new General.ScreenSaver();
             screenSaver.Run();
         }
     }

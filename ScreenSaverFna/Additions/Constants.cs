@@ -1,4 +1,4 @@
-﻿namespace ScreenSaverFna
+﻿namespace ScreenSaverFna.Additions
 {
     public class Constants
     {

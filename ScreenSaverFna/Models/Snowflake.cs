@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace ScreenSaverFna
+namespace ScreenSaverFna.Models
 {
     /// <summary>
     /// Модель снежинки
@@ -43,7 +43,7 @@ namespace ScreenSaverFna
         /// <summary>
         /// Прямоугольник для отображения снежинки
         /// </summary>
-        public Rectangle Rectangle => new (X, Y, Width, Height);
+        public Rectangle Rectangle => new(X, Y, Width, Height);
 
         /// <summary>
         /// Цвет фона для отображения снежинки
