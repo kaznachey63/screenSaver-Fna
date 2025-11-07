@@ -1,2 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿namespace ScreenSaverFna
+{
+    static class Program
+    {
+        /// <summary>
+        /// Точка входа в пограмму
+        /// </summary>
+        static void Main()
+        {
+            using var screenSaver = new General.ScreenSaver();
+            screenSaver.Run();
+        }
+    }
+}
