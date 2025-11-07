@@ -5,21 +5,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-	  <PostBuildEvent>
-		  if not exist "$(OutputPath)" mkdir "$(OutputPath)"
-		  robocopy "$(ProjectDir)fnalibs\x64" "$(OutputPath)" *.dll /E /Y
-		  exit 0
-	  </PostBuildEvent>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Utilities\**" />
-    <EmbeddedResource Remove="Utilities\**" />
-    <None Remove="Utilities\**" />
-  </ItemGroup>
-
-
-	
   <ItemGroup>
     <Reference Include="FNA">
       <HintPath>FNA.dll</HintPath>
@@ -36,6 +23,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+
+	
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /y /d  &quot;$(ProjectDir)fnalibs\x64\*.dll&quot; &quot;$(ProjectDir)$(OutDir)&quot;" />
+  </Target>
 	
 	
 
