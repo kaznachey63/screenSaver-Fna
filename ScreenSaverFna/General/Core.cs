@@ -13,9 +13,9 @@ namespace ScreenSaverFna.General
     {
         private List<Snowflake> snowflakes = new();
         private readonly Random random = new();
-        private Texture2D sf = null!;
-        private Texture2D bg = null!;
-        private GraphicsDeviceManager graphics = null!;
+        private readonly Texture2D sf = null!;
+        private readonly Texture2D bg = null!;
+        private readonly GraphicsDeviceManager graphics = null!;
 
         public Core(GraphicsDeviceManager graphicsDeviceManager, ContentManager content)
         {
