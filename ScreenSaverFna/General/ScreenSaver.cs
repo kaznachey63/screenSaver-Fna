@@ -25,14 +25,6 @@ namespace ScreenSaverFna.General
         }
 
         /// <summary>
-        /// Эта функция автоматически вызывается при запуске игры для инициализации любых переменных, кроме графических.
-        /// </summary>
-        protected override void Initialize()
-        {
-            base.Initialize();
-        }
-
-        /// <summary>
         /// Автоматически вызывается при запуске игры для загрузки любых игровых ресурсов (графики, звука и т. д.).
         /// </summary>
         protected override void LoadContent()
